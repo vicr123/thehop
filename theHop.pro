@@ -4,7 +4,8 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network thelib
+CONFIG   += c++14
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -24,8 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        welcomewindow.cpp
+        welcomewindow.cpp \
+    transferto.cpp \
+    animatedstackedwidget.cpp
 
-HEADERS  += welcomewindow.h
+HEADERS  += welcomewindow.h \
+    transferto.h \
+    animatedstackedwidget.h
 
-FORMS    += welcomewindow.ui
+FORMS    += welcomewindow.ui \
+    transferto.ui
