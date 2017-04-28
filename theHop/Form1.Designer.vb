@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.TitleBar1 = New theHop.TitleBar()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -30,8 +31,8 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ContemporaryButton1 = New theHop.ContemporaryButton()
-        Me.ContemporaryButton2 = New theHop.ContemporaryButton()
-        Me.ContemporaryButton3 = New theHop.ContemporaryButton()
+        Me.TransferAway = New theHop.ContemporaryButton()
+        Me.TransferTo = New theHop.ContemporaryButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,6 +42,7 @@ Partial Class Form1
         'TitleBar1
         '
         Me.TitleBar1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.TitleBar1.CanClose = True
         Me.TitleBar1.Dock = System.Windows.Forms.DockStyle.Top
         Me.TitleBar1.ForeColor = System.Drawing.Color.White
         Me.TitleBar1.Location = New System.Drawing.Point(1, 1)
@@ -103,10 +105,9 @@ Partial Class Form1
         '
         Me.Label2.Location = New System.Drawing.Point(16, 78)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(504, 34)
+        Me.Label2.Size = New System.Drawing.Size(504, 104)
         Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Use theHop to transfer your files from this device to another device, or from ano" &
-    "ther device to this device."
+        Me.Label2.Text = resources.GetString("Label2.Text")
         '
         'ContemporaryButton1
         '
@@ -128,41 +129,41 @@ Partial Class Form1
         Me.ContemporaryButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ContemporaryButton1.UseVisualStyleBackColor = False
         '
-        'ContemporaryButton2
+        'TransferAway
         '
-        Me.ContemporaryButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.ContemporaryButton2.ButtonType = theHop.ContemporaryButton.BtnType.Flat
-        Me.ContemporaryButton2.FlatAppearance.BorderSize = 0
-        Me.ContemporaryButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.ContemporaryButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ContemporaryButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ContemporaryButton2.ForeColor = System.Drawing.Color.White
-        Me.ContemporaryButton2.Image = Global.theHop.My.Resources.Resources.go_next_64
-        Me.ContemporaryButton2.Location = New System.Drawing.Point(270, 185)
-        Me.ContemporaryButton2.Name = "ContemporaryButton2"
-        Me.ContemporaryButton2.Size = New System.Drawing.Size(250, 95)
-        Me.ContemporaryButton2.TabIndex = 8
-        Me.ContemporaryButton2.Text = "Transfer from this device"
-        Me.ContemporaryButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.ContemporaryButton2.UseVisualStyleBackColor = False
+        Me.TransferAway.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.TransferAway.ButtonType = theHop.ContemporaryButton.BtnType.Flat
+        Me.TransferAway.FlatAppearance.BorderSize = 0
+        Me.TransferAway.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.TransferAway.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.TransferAway.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TransferAway.ForeColor = System.Drawing.Color.White
+        Me.TransferAway.Image = Global.theHop.My.Resources.Resources.go_next_64
+        Me.TransferAway.Location = New System.Drawing.Point(270, 185)
+        Me.TransferAway.Name = "TransferAway"
+        Me.TransferAway.Size = New System.Drawing.Size(250, 95)
+        Me.TransferAway.TabIndex = 8
+        Me.TransferAway.Text = "Transfer from this device"
+        Me.TransferAway.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.TransferAway.UseVisualStyleBackColor = False
         '
-        'ContemporaryButton3
+        'TransferTo
         '
-        Me.ContemporaryButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.ContemporaryButton3.ButtonType = theHop.ContemporaryButton.BtnType.Flat
-        Me.ContemporaryButton3.FlatAppearance.BorderSize = 0
-        Me.ContemporaryButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.ContemporaryButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ContemporaryButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ContemporaryButton3.ForeColor = System.Drawing.Color.White
-        Me.ContemporaryButton3.Image = Global.theHop.My.Resources.Resources.go_previous_64
-        Me.ContemporaryButton3.Location = New System.Drawing.Point(19, 185)
-        Me.ContemporaryButton3.Name = "ContemporaryButton3"
-        Me.ContemporaryButton3.Size = New System.Drawing.Size(250, 95)
-        Me.ContemporaryButton3.TabIndex = 9
-        Me.ContemporaryButton3.Text = "Transfer to this device"
-        Me.ContemporaryButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.ContemporaryButton3.UseVisualStyleBackColor = False
+        Me.TransferTo.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.TransferTo.ButtonType = theHop.ContemporaryButton.BtnType.Flat
+        Me.TransferTo.FlatAppearance.BorderSize = 0
+        Me.TransferTo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.TransferTo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.TransferTo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TransferTo.ForeColor = System.Drawing.Color.White
+        Me.TransferTo.Image = Global.theHop.My.Resources.Resources.go_previous_64
+        Me.TransferTo.Location = New System.Drawing.Point(19, 185)
+        Me.TransferTo.Name = "TransferTo"
+        Me.TransferTo.Size = New System.Drawing.Size(250, 95)
+        Me.TransferTo.TabIndex = 9
+        Me.TransferTo.Text = "Transfer to this device"
+        Me.TransferTo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.TransferTo.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -170,8 +171,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(532, 334)
-        Me.Controls.Add(Me.ContemporaryButton3)
-        Me.Controls.Add(Me.ContemporaryButton2)
+        Me.Controls.Add(Me.TransferTo)
+        Me.Controls.Add(Me.TransferAway)
         Me.Controls.Add(Me.ContemporaryButton1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -202,6 +203,6 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents ContemporaryButton1 As ContemporaryButton
-    Friend WithEvents ContemporaryButton2 As ContemporaryButton
-    Friend WithEvents ContemporaryButton3 As ContemporaryButton
+    Friend WithEvents TransferAway As ContemporaryButton
+    Friend WithEvents TransferTo As ContemporaryButton
 End Class

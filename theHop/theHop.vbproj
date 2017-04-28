@@ -46,6 +46,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -75,6 +78,12 @@
     <Compile Include="ContemporaryButton.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FlatProgress.designer.vb">
+      <DependentUpon>FlatProgress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FlatProgress.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -103,8 +112,17 @@
     <Compile Include="TitleBar.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="TransferAway.Designer.vb">
+      <DependentUpon>TransferAway.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransferAway.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FlatProgress.resx">
+      <DependentUpon>FlatProgress.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -117,8 +135,14 @@
     <EmbeddedResource Include="TitleBar.resx">
       <DependentUpon>TitleBar.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TransferAway.resx">
+      <DependentUpon>TransferAway.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

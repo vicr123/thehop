@@ -11,6 +11,15 @@ Public Class TitleBar
     Public Shared Function ReleaseCapture() As Boolean
     End Function
 
+    Public Property CanClose() As Boolean
+        Get
+            Return CloseButton.Visible
+        End Get
+        Set(ByVal value As Boolean)
+            CloseButton.Visible = value
+        End Set
+    End Property
+
     Public Sub New()
 
         ' This call is required by the designer.
