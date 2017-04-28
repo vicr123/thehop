@@ -9,6 +9,14 @@
 #include "animatedstackedwidget.h"
 #include <QPushButton>
 #include <QNetworkInterface>
+#include <QLabel>
+#include <QTcpSocket>
+#include <QTcpServer>
+#include <QDebug>
+#include <QtEndian>
+#include <QDateTime>
+#include <QCryptographicHash>
+#include <QtCrypto/QtCrypto>
 
 namespace Ui {
 class TransferTo;
@@ -43,10 +51,17 @@ private slots:
 
     void setupNetworkScreen();
 
+    void tcpServerNewConnection();
+
 private:
     Ui::TransferTo *ui;
 
     bool eventFilter(QObject *obj, QEvent *e);
+
+    QTcpSocket* dataSocket;
+    QTcpServer* tcpServer;
+    QByteArray encryptionKey;
+    QCA::Cipher* encryptionCipher;
 };
 
 #endif // TRANSFERTO_H

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>495</width>
+    <width>523</width>
     <height>432</height>
    </rect>
   </property>
@@ -32,6 +32,9 @@
       <number>2</number>
      </property>
      <widget class="QWidget" name="page">
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QLabel" name="label">
@@ -63,7 +66,8 @@
             <string>Use an external hard disk</string>
            </property>
            <property name="icon">
-            <iconset theme="drive-harddisk"/>
+            <iconset theme="drive-harddisk">
+             <normaloff>.</normaloff>.</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -82,7 +86,8 @@
             <string>Use the network</string>
            </property>
            <property name="icon">
-            <iconset theme="network-wireless"/>
+            <iconset theme="network-wireless">
+             <normaloff>.</normaloff>.</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -112,8 +117,15 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="page_2"/>
+     <widget class="QWidget" name="page_2">
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+     </widget>
      <widget class="QWidget" name="page_3">
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
       <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
         <widget class="QLabel" name="label_3">
@@ -149,6 +161,26 @@
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>You'll need to be connected to the same network to do this.</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
       </layout>
      </widget>
     </widget>
@@ -173,7 +205,8 @@
         <string>Cancel</string>
        </property>
        <property name="icon">
-        <iconset theme="dialog-cancel"/>
+        <iconset theme="dialog-cancel">
+         <normaloff>.</normaloff>.</iconset>
        </property>
       </widget>
      </item>
@@ -196,7 +229,8 @@
         <string>Back</string>
        </property>
        <property name="icon">
-        <iconset theme="go-previous"/>
+        <iconset theme="go-previous">
+         <normaloff>.</normaloff>.</iconset>
        </property>
       </widget>
      </item>
@@ -206,7 +240,8 @@
         <string>Next</string>
        </property>
        <property name="icon">
-        <iconset theme="go-next"/>
+        <iconset theme="go-next">
+         <normaloff>.</normaloff>.</iconset>
        </property>
       </widget>
      </item>
